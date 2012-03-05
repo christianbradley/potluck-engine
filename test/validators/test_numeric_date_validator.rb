@@ -8,7 +8,7 @@ class TestNumericDateValidator < MiniTest::Unit::TestCase
   end
 
   def test_valid_dates
-    assert validator("1-1-2011").valid?
+    assert_equal true, validator("1-1-2011").valid?
   end
 
 end

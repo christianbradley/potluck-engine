@@ -39,7 +39,7 @@ module Validators
     end
 
     def valid?
-      @value =~ PATTERN
+      @value =~ PATTERN ? true : false
     end
 
   end

@@ -8,14 +8,14 @@ class TestPresenceValidator < MiniTest::Unit::TestCase
   end
 
   def test_valid_values
-    assert validator("Foo").valid?
-    assert validator("\nFoo Bar").valid?
+    assert_equal true, validator("Foo").valid?
+    assert_equal true, validator("\nFoo Bar").valid?
   end
 
   def test_invalid_values
-    assert validator("").invalid?
-    assert validator("\n").invalid?
-    assert validator(" \n  ").invalid?
+    assert_equal true, validator("").invalid?
+    assert_equal true, validator("\n").invalid?
+    assert_equal true, validator(" \n  ").invalid?
   end
 
 end
